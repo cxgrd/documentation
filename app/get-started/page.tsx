@@ -2,8 +2,8 @@ import Content from './content.mdx';
 import {Metadata} from 'next';
 
 export const metadata: Metadata = {
-  title: 'CXGRD Docs',
-  description: 'Getting started with CXGRD. Understanding what it is and what does a typical workflow look like.',
+    title : 'Installation | CXGRD Docs',
+    description : 'Learn about the requirements for running, installing and using CXGRD '
 };
 
 export default function Page() {
