@@ -20,7 +20,7 @@ const geistMono = Geist_Mono({
 
 
 const nav = [
-  { title: 'Introduction', href: '' },
+  { title: 'Introduction', href: '/' },
   { title: 'Quickstart', href: '/get-started' },
   {
     title: 'Commands',
