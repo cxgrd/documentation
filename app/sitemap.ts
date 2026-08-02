@@ -6,6 +6,7 @@ export default function sitemap() : MetadataRoute.Sitemap {
   const routes = [
     '',
     '/get-started',
+    '/architecture',
     '/team',
     '/commands/auth-login',
     '/commands/check',
