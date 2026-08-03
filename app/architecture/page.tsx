@@ -2,8 +2,12 @@ import {Metadata} from 'next';
 import Image from "next/image";
 
 export const metadata : Metadata = {
+  metadataBase: new URL("https://docs.cxgrd.com"),
   title: 'Architecture of CXGRD | CXGRD Docs',
   description: 'An overview of the architectural design decisions behind CXGRD and its approach to computing blast radius.',
+  alternates: {
+    canonical: "/architecture",
+  },
 }
 
 export default function ArchitecturePage() {
