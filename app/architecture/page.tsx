@@ -16,7 +16,7 @@ export default function ArchitecturePage() {
             </p>
         </div>
 
-        <div className="mt-20 w-full overflow-x-auto">
+        <div className="mt-7 w-full overflow-x-auto">
             <div className="min-w-[700px] md:min-w-0 mx-auto">
                 <Image
                     src="/cxgrd_design.png"
