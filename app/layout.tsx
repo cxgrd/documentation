@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     siteName: "CXGRD Docs",
     images: [
       {
-        url: "https://cxgrd.com/Homepage.png",
+        url: "https://www.cxgrd.com/Homepage.png",
         width: 1200,
         height: 630,
         alt: "CXGRD Logo",

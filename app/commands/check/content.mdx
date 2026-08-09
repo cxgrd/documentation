@@ -29,7 +29,7 @@ Compiler verification is currently supported for TypeScript, Python, and Rust.
 
 `--ci` — CI mode. Posts the check result to the CXGRD server, which evaluates your team's merge policy and updates the GitHub commit status on the PR (Team plan only).
 
-`--json` — this flags returns the output of check command in json format, to be used by agents (comming soon)
+`--json` — this flags returns the output of check command in json format. A part of cxgrd plugin for Claude Code
 
 ## Example output
 
@@ -120,4 +120,8 @@ PR opened
 
 The `CXGRD_AUTH_TOKEN` secret should be a **CI token** generated from the dashboard, not your personal login token from `~/.cg/auth.json`. CI tokens never expire — you set them once and they work forever until revoked. Login tokens expire every 30 days.
 
-> Upgrade at https://cxgrd.com/pricing
+> Upgrade at https://www.cxgrd.com/pricing
+
+## Related
+
+- [Merge policies](/merge-policies)

@@ -1,7 +1,7 @@
 # cxgrd documentation
 
 > Make AI-assisted code changes without breaking your codebase.
-> **[cxgrd.com](https://cxgrd.com)**
+> **[cxgrd.com](https://www.cxgrd.com)**
 
 ---
 
@@ -31,4 +31,4 @@ This repository contains the documentation for cxgrd.
 6. [AI vs cxgrd](https://github.com/cxgrd/documentation/blob/main/app/ai-vs-cxgrd/content.mdx)
 
 ## FAQs
-For FAQs, visit [cxgrd faqs](https://cxgrd.com/faq)
+For FAQs, visit [cxgrd faqs](https://www.cxgrd.com/faq)
