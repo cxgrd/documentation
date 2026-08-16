@@ -5,6 +5,7 @@ import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 import { useState } from 'react'
 import { Footer } from '@/components/Footer'
+import { TableOfContents } from '@/components/TableOfContents'
 import './globals.css'
 import { Geist, Geist_Mono } from "next/font/google";
 
@@ -139,9 +140,15 @@ export default function DocsLayoutClient({ children }: { children: React.ReactNo
               {renderNav()}
             </aside>
 
-            <main className="flex-1 px-8 py-10 max-w-3xl prose prose-invert prose-slate">
+            <main id="docs-content" className="flex-1 px-8 py-10 max-w-3xl prose prose-invert prose-slate">
               {children}
             </main>
+
+            <aside className="w-56 shrink-0 px-4 py-10 hidden xl:block">
+              <div className="sticky top-10">
+                <TableOfContents />
+              </div>
+            </aside>
           </div>
 
           <Footer />
