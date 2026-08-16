@@ -6,6 +6,8 @@ import { usePathname } from 'next/navigation'
 import { useState } from 'react'
 import { Footer } from '@/components/Footer'
 import { TableOfContents } from '@/components/TableOfContents'
+import { PrevNextNav } from '@/components/PrevNextNav'
+import { nav } from '@/lib/nav'
 import './globals.css'
 import { Geist, Geist_Mono } from "next/font/google";
 
@@ -19,30 +21,6 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-
-const nav = [
-  { title: 'Introduction', href: '/' },
-  { title: 'Quickstart', href: '/get-started' },
-  { title: 'Architecture', href: '/architecture' },
-  {
-    title: 'Commands',
-    children: [
-      { title: 'scan', href: '/commands/scan' },
-      { title: 'input', href: '/commands/input' },
-      { title: 'prompt', href: '/commands/prompt' },
-      { title: 'check', href: '/commands/check' },
-      { title: 'auth login', href: '/commands/auth-login' },
-      { title: 'doctor', href: '/commands/doctor' },
-      { title: 'init-hooks', href: '/commands/init-hooks' },
-      { title: 'watch', href: '/commands/watch' },
-      { title: 'config', href: '/commands/config' },
-    ],
-  },
-  { title: 'Team', href: '/team' },
-  { title: 'How Merge Policies work', href: '/merge-policies' },
-  { title: 'Deterministic Analysis vs. AI Agents', href: '/ai-vs-cxgrd' },
-]
-
 export default function DocsLayoutClient({ children }: { children: React.ReactNode }) {
   const pathname = usePathname()
   const [commandsOpen, setCommandsOpen] = useState(
@@ -53,7 +31,7 @@ export default function DocsLayoutClient({ children }: { children: React.ReactNo
   const renderNav = (mobile = false) => (
     <nav className={`flex flex-col gap-1 ${mobile ? 'w-full' : ''}`}>
       {nav.map((item) =>
-        'children' in item ? (
+        'children' in item && item.children ? (
           <div key={item.title}>
             <button
               onClick={() => setCommandsOpen((o) => !o)}
@@ -84,7 +62,7 @@ export default function DocsLayoutClient({ children }: { children: React.ReactNo
         ) : (
           <Link
             key={item.href}
-            href={item.href}
+            href={item.href!}
             onClick={() => setMenuOpen(false)}
             className={`text-sm px-3 py-1.5 rounded-md transition-colors ${
               pathname === item.href
@@ -142,6 +120,7 @@ export default function DocsLayoutClient({ children }: { children: React.ReactNo
 
             <main id="docs-content" className="flex-1 px-8 py-10 max-w-3xl prose prose-invert prose-slate">
               {children}
+              <PrevNextNav />
             </main>
 
             <aside className="w-56 shrink-0 px-4 py-10 hidden xl:block">
