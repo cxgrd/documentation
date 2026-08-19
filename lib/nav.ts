@@ -28,6 +28,7 @@ export const nav: NavItem[] = [
     ],
   },
   { title: 'Team', href: '/team' },
+  { title: 'CXGRD GitHub Action', href: '/cxgrd-action' },
   { title: 'How Merge Policies work', href: '/merge-policies' },
   { title: 'Deterministic Analysis vs. AI Agents', href: '/ai-vs-cxgrd' },
 ]

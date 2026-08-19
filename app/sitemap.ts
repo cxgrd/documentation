@@ -19,6 +19,7 @@ export default function sitemap() : MetadataRoute.Sitemap {
     '/commands/watch',
     '/merge-policies',
     '/ai-vs-cxgrd',
+    '/cxgrd-action',
   ].map((route) => ({
     url: `${baseUrl}${route}`,
     lastModified: new Date(),
