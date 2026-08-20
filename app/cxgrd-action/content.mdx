@@ -6,7 +6,7 @@ CXGRD is designed for teams using AI-assisted development. It makes the likely i
 
 The action performs these steps in the repository workspace:
 
-1. Installs the repository's npm dependencies with `npm ci`.
+1. Installs the repository's dependencies.
 2. Installs the CXGRD CLI globally.
 3. Builds or refreshes the dependency graph with `cxgrd scan`.
 4. Runs `cxgrd check --json`.
@@ -34,14 +34,19 @@ jobs:
 		name: Analyze blast radius
 		runs-on: ubuntu-latest
 		steps:
-			- name: Check out repository
-				uses: actions/checkout@v4
-
-			- name: Run CXGRD
+			- name: install dependencies
+				run: <install command (npm/pip/cargo)>
+			- name: install cxgrd
+				run: npm install -g cxgrd
+			- name: Run cxgrd scan
 				uses: cxgrd/cxgrd-action@main
-				with:
-					fail-on: critical
+				run: cxgrd scan
+			- name: Run cxgrd check
+				uses: cxgrd/cxgrd-action@main
+				run: cxgrd check
 ```
+
+Add the install command in the yaml script according to the programming language used.
 
 ## Inputs
 
