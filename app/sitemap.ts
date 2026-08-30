@@ -20,6 +20,7 @@ export default function sitemap() : MetadataRoute.Sitemap {
     '/merge-policies',
     '/ai-vs-cxgrd',
     '/cxgrd-action',
+    '/release-notes'
   ].map((route) => ({
     url: `${baseUrl}${route}`,
     lastModified: new Date(),
