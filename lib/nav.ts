@@ -31,6 +31,7 @@ export const nav: NavItem[] = [
   { title: 'CXGRD GitHub Action', href: '/cxgrd-action' },
   { title: 'How Merge Policies work', href: '/merge-policies' },
   { title: 'Deterministic Analysis vs. AI Agents', href: '/ai-vs-cxgrd' },
+  { title: "Release Notes", href: '/release-notes'}
 ]
 
 // Flattened, in-order list of every real page (Commands' children inlined

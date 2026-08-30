@@ -24,7 +24,7 @@ const geistMono = Geist_Mono({
 export default function DocsLayoutClient({ children }: { children: React.ReactNode }) {
   const pathname = usePathname()
   const [commandsOpen, setCommandsOpen] = useState(
-    true || pathname.startsWith('/commands')
+    pathname.startsWith('/commands')
   )
   const [menuOpen, setMenuOpen] = useState(false)
 

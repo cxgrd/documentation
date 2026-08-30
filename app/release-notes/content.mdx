@@ -1,0 +1,20 @@
+## Version 1.0.0 — 2026-08-30
+
+###  What's New
+* **CXGRD Actions:** The action performs these steps in the repository workspace:
+    - Installs the repository's dependencies.
+    - Installs the CXGRD CLI globally.
+    - Builds or refreshes the dependency graph with `cxgrd scan`.
+    - Runs `cxgrd check --json`.
+    - Creates or updates a pull request comment with the risk level and affected files.
+
+###  What's stable
+* **Core commands:** The four commands `scan`, `input`, `prompt` and `check`
+* **`--json` flag:** `scan`, `input` and `check` support `--json` flag for Actions script and Claude Code plugin
+* **Policy Enforcement:** Merge policy enforcements and team dashboard have been improved with UI/UX fixed
+* **CI Token:** CI tokens now stay valid for a month, reducing how often users need to revoke and reissue them
+
+###  Bug Fixes
+* **GitHookManager:** The batScript and hookScript methods had wrong commands for retrieving git diffs, which are fixed now
+
+For more information on Action script, [CXGRD Action](https://docs.cxgrd.com/cxgrd-action)
