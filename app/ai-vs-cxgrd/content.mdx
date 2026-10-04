@@ -24,9 +24,8 @@ invented.
 
 ## Where AI still adds value
 
-CXGRD isn't anti-AI — Pro and Team tiers use an LLM (Groq) for **prompt enrichment**: turning a computed blast radius into a clear, readable prompt for 
-feeding into an AI coding assistant's context window. The graph traversal that determines *what* is affected stays deterministic; the 
-LLM's job is limited to *explaining* that result in natural language, not deciding it.
+CXGRD isn't anti-AI — its Pro and Team tiers provide **deterministic prompt generation**: turning a computed blast radius into a clear prompt for 
+an AI coding assistant's context window. Both the graph traversal and prompt assembly are deterministic, require no LLM API key, and run locally.
 
 This is also where CXGRD complements tools like Cursor or Claude Code rather than competing with them: those tools govern the *actions* an AI agent takes 
 while writing code. CXGRD governs the *consequences* of a change once it exists — checking blast radius before merge, regardless of whether the code was 

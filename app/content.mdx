@@ -7,7 +7,7 @@ Modern codebases are deeply interconnected — changing one file can silently br
 **CXGRD** solves this. It scans your project and builds a complete dependency graph, then uses that graph to:
 
 - **Tell you exactly what will break** before you make a change
-- **Enrich your AI prompts** with architectural context so the AI makes safer, smarter suggestions
+- **Generate deterministic AI coding prompts** with blast-radius context so coding agents get a focused file scope
 - **Validate your code** for circular dependencies, orphaned files, and layer violations — both structurally and with compiler-backed checks
 - **Enforce merge policies** on pull requests via GitHub Actions, blocking merges that exceed your team's blast radius limits
 
@@ -43,7 +43,7 @@ cxgrd check
 | `cxgrd scan --team` | Scan and push graph to shared team cloud (Team plan) |
 | `cxgrd scan --sync` | Scan and push graph to personal cloud (Pro plan) |
 | `cxgrd input "change"` | Compute blast radius of a planned change |
-| `cxgrd prompt "change"` | Generate architecture-aware AI prompt (Pro) |
+| `cxgrd prompt "change"` | Generate a deterministic, architecture-aware coding prompt (Pro) |
 | `cxgrd check` | Compiler-backed verification of AI diffs |
 | `cxgrd check --ci` | CI mode: post result to server for GitHub PR status (Team plan) |
 | `cxgrd auth login` | Sign in for Pro/Team features |
@@ -56,7 +56,7 @@ cxgrd check
 | Dependency graph (`scan`) | ✓ | ✓ | ✓ |
 | Blast radius (`input`) | ✓ | ✓ | ✓ |
 | Compiler checks (`check`) | ✓ | ✓ | ✓ |
-| AI prompt enrichment (`prompt`) | — | ✓ | ✓ |
+| Deterministic prompt generation (`prompt`) | — | ✓ | ✓ |
 | Cloud graph sync (`--sync`) | — | ✓ | ✓ |
 | Team graph (`--team`) | — | — | ✓ |
 | CI merge enforcement (`--ci`) | — | — | ✓ |

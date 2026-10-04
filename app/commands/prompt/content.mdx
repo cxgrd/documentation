@@ -2,9 +2,9 @@
 
 > This command works for Pro, Team and Enterprise plans.
 
-Generate an architecturally-aware prompt for your AI assistant.
-Instead of giving your AI a vague instruction, CXGRD generates an enriched prompt that includes the relevant modules, symbols, dependencies, 
-and architectural constraints, which are included in the `./cg` directory. Your AI gets the full picture — not just your words.
+Generate a deterministic, architecture-aware prompt for your coding assistant. CXGRD combines your change request with the dependency graph
+and blast-radius results in `./cg`, listing focused files, per-file impact details, and actionable verification steps. Prompt generation
+runs locally and does not require an LLM API key.
 
 ## Usage
 
@@ -16,43 +16,26 @@ cxgrd prompt "description of change"
 
 ```bash
 PS C:\Users\name\project1> cxgrd prompt "renaming get_installation_token to get_token "
-🔄 Generating AI prompt (Pro)...
+🔄 Generating deterministic coding prompt (Pro)...
    Input: renaming get_installation_token to get_token
-   Calling LLM with architectural subgraph + repo memory...
 
-✓ Enriched prompt
+✓ Generated prompt
 
-### Renaming `get_installation_token` to `get_token`
-#### Actionable Steps
+Implement: renaming get_installation_token to get_token
 
-To rename the `get_installation_token` function to `get_token` while preserving the original intent and minimizing disruptions, follow 
-these steps:
+Refactor/change focus:
+- `src/auth/token.ts` — direct change target identified from the request; architecture layer: service.
+- `src/routes/installations.ts` — high risk, direct dependent; Depends on token.ts; review and update if the change requires it.
+- `src/cli/commands.ts` — medium risk, transitive dependent, depth 2; Depends on installations.ts; review and update if the change requires it.
 
-1. **Identify and Update Affected Files**: Based on the cxgrd context, focus on the model layer, which contains 1 file, and other layers
-with 21 files. Specifically, update files that directly reference `get_installation_token` to use `get_token` instead.
+Blast-radius summary: medium overall risk; 1 direct target(s), 2 affected dependent(s).
 
-2. **Dependency Constraints**: Ensure that the renaming does not violate any dependency constraints. Given the low-risk assessment from 
-the analyzer, proceed with caution, keeping an eye on potential cascading effects, especially in the 22 files and 160 dependencies 
-identified in the recent cxgrd scan.
+Actionable steps:
+1. Inspect the direct targets and their listed dependents; preserve existing public interfaces and dependency direction unless the request requires changing them.
+2. Make the requested change in the focused files, updating dependent files only where the blast-radius notes indicate compatibility work is needed.
+3. Run the targeted unit and integration tests for the affected files. Include relevant boundary, error-handling, and regression cases, then run the project test suite.
+4. Run `cxgrd check --changed` and review any new architecture or dependency issues.
 
-3. **Concrete Files/Modules to Touch**:
-    - **Model Layer (1 file)**: Update the function definition and any internal references to `get_installation_token` to `get_token`.
-    - **Other Layers (21 files)**: Review each file for references to `get_installation_token` and update them to `get_token`. This 
-    includes any function calls, variable assignments, or conditional statements that rely on the original function name.
-
-4. **Verification Steps**:
-    - **Tests**: Run comprehensive tests to ensure the renaming has not introduced any regressions. This includes unit tests, integration 
-    tests, and any end-to-end tests that may be affected by the change.
-    - **cxgrd Check**: After making the changes, run another cxgrd scan to verify that the blast radius remains low and that no new 
-    dependencies or risks have been introduced.
-
-5. **Commit Message**: When committing the changes, include a clear and descriptive message, such as "Renamed `get_installation_token` 
-to `get_token` to align with updated naming conventions."
-
-By following these steps and maintaining a focus on the specific files and layers affected by the renaming, you can ensure a precise and 
-controlled update that preserves the developer's original intent while adhering to the architectural layers and dependency constraints 
-of the project.
-
-   via groq (llama-3.3-70b-versatile) · plan: pro
+   deterministic engine · plan: pro
    Saved to C:\Users\name\project1\.cg\last-prompt.md
 ```
