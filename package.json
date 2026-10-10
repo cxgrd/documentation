@@ -15,8 +15,6 @@
     "@supabase/supabase-js": "^2.107.0",
     "@tailwindcss/typography": "^0.5.19",
     "next": "16.2.6",
-    "nextra": "^4.6.1",
-    "nextra-theme-docs": "^4.6.1",
     "pg": "^8.11.0",
     "posthog-js": "^1.399.2",
     "react": "19.2.4",
