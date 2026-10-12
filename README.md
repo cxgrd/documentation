@@ -30,5 +30,10 @@ This repository contains the documentation for cxgrd.
 
 6. [AI vs cxgrd](https://github.com/cxgrd/documentation/blob/main/app/ai-vs-cxgrd/content.mdx)
 
+7. [Github Action](https://github.com/cxgrd/documentation/blob/main/app/cxgrd-action/content.mdx)
+
 ## FAQs
 For FAQs, visit [cxgrd faqs](https://www.cxgrd.com/faq)
+
+### Contributing
+If you wish to contribute, read [CONTRIBUTING.md](https://github.com/cxgrd/cli/blob/main/CONTRIBUTING.md)

@@ -1,0 +1,41 @@
+# CXGRD Documentation
+
+> Documentation for CXGRD, a TypeScript CLI that performs deterministic blast radius analysis and merge policy enforcement for AI-assisted coding. 
+Use these pages for installation, command usage, CI integration, and team policy setup. Marketing site: https://www.cxgrd.com
+
+Notes for agents:
+- Commands: `scan` (build dependency graph), `input "<change>"` (pre-change blast radius and risk), `prompt "<change>"` (generate an enriched prompt 
+  with risk level and affected files), `check` (post-change validation).
+- `--json` is supported on `scan`, `input`, and `check` (not `prompt`) for machine-readable output.
+- `check` is free and needs no token: it runs compiler checks and can post a PR comment with blast radius, risk level, and affected files.
+- `--ci` mode and merge policy enforcement require authentication and a Team plan.
+- Auth is `cxgrd auth login`; credentials are stored locally inside a `.cg/` directory. CI tokens are for pipelines, not interactive use.
+
+## Getting started
+
+- [Introduction](https://docs.cxgrd.com/): What CXGRD does and when to use it
+- [Installation](https://docs.cxgrd.com/get-started): Install from npm and run first scan.
+
+## CLI
+
+- [scan](https://docs.cxgrd.com/commands/scan): Build the dependency graph for a repository
+- [input](https://docs.cxgrd.com/commands/input): Pre-change blast radius and risk for a described change
+- [prompt](https://docs.cxgrd.com/commands/prompt): Generate an enriched prompt for your AI coding tool
+- [check](https://docs.cxgrd.com/commands/check): Post-change and merge-time validation
+- [auth](https://docs.cxgrd.com/commands/auth-login): Authentication command for Pro, Team and Enterprise users
+- [doctor](https://docs.cxgrd.com/commands/doctor): Checks the readiness of your project environment and verifies whether your toolchain is ready before enabling strict checks.
+- [init-hooks](https://docs.cxgrd.com/commands/init-hooks): Sets up a pre-commit hook so cxgrd can run checks automatically before every commit.
+- [watch](https://docs.cxgrd.com/commands/watch): Runs in the background and monitors your project for dependency changes in real time.
+- [config](https://docs.cxgrd.com/commands/config): Command used to manage cxgrd configurations
+
+## CI and teams
+
+- [GitHub Actions](https://docs.cxgrd.com/cxgrd-action): Install actions script and configure PR checks
+- [Team tier](https://docs.cxgrd.com/team): The Team plan gives shared architectural memory, CI merge enforcement, merge policies, a live dashboard, and a full audit log.
+- [Merge policies](https://docs.cxgrd.com/merge-policies): Define and enforce merge rules (Team plan)
+
+## Optional
+
+- [FAQ](https://cxgrd.com/faq): Determinism, scope, and limitations
+- [Changelog](https://cxgrd.com/changelog): Release notes
+- [llms.txt for main website](https://cxgrd.com/llms.txt): Index of main website pages for LLMs
