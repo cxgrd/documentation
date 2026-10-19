@@ -36,6 +36,6 @@ Notes for agents:
 
 ## Optional
 
-- [FAQ](https://cxgrd.com/faq): Determinism, scope, and limitations
-- [Changelog](https://cxgrd.com/changelog): Release notes
-- [llms.txt for main website](https://cxgrd.com/llms.txt): Index of main website pages for LLMs
+- [FAQ](https://www.cxgrd.com/faq): Determinism, scope, and limitations
+- [Changelog](https://www.cxgrd.com/changelog): Release notes
+- [llms.txt for main website](https://www.cxgrd.com/llms.txt): Index of main website pages for LLMs
