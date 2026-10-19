@@ -7,7 +7,12 @@ export const metadata : Metadata = {
     description : 'Run checks automatically before commits with cxgrd init-hooks',
     alternates: {
       canonical: "/commands/init-hooks",
-    }
+    },
+    openGraph: {
+      url: "/commands/init-hooks",
+      title: 'init-hooks — CXGRD Docs',
+      description: 'Run checks automatically before commits with cxgrd init-hooks',
+    },
 };
 
 export default function Page() {

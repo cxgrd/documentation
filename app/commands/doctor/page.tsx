@@ -7,7 +7,12 @@ export const metadata : Metadata = {
     description : 'Check the readiness and availability of tools before starting strict checks',
     alternates: {
       canonical: "/commands/doctor",
-    }
+    },
+    openGraph: {
+      url: "/commands/doctor",
+      title: 'doctor — CXGRD Docs',
+      description: 'Check the readiness and availability of tools before starting strict checks',
+    },
 };
 
 export default function Page() {

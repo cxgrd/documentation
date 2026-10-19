@@ -8,6 +8,11 @@ export const metadata : Metadata = {
   alternates: {
     canonical: "/architecture",
   },
+  openGraph: {
+    url: "/architecture",
+    title: 'Architecture — CXGRD Docs',
+    description: 'An overview of the architectural design decisions behind CXGRD and its approach to computing blast radius.',
+  },
 }
 
 export default function ArchitecturePage() {

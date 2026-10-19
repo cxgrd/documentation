@@ -7,7 +7,12 @@ export const metadata : Metadata = {
     description : 'The authentication command for CXGRD',
     alternates: {
       canonical: "/commands/auth-login",
-    }
+    },
+    openGraph: {
+      url: "/commands/auth-login",
+      title: 'auth-login — CXGRD Docs',
+      description: 'The authentication command for CXGRD',
+    },
 };
 
 export default function Page() {

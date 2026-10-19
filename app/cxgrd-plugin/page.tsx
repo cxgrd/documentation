@@ -7,7 +7,12 @@ export const metadata: Metadata = {
     description : 'Claude code plugin for cxgrd ',
     alternates: {
       canonical: "/commands/cxgrd-plugin",
-    }
+    },
+    openGraph: {
+    url: "/cxgrd-plugin",
+    title: 'cxgrd plugin — CXGRD Docs',
+    description: 'Learn about the cxgrd plugin and how to use it.',
+  },
 };
 
 export default function Page() {

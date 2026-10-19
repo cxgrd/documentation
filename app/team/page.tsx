@@ -8,6 +8,11 @@ export const metadata : Metadata = {
     alternates: {
     canonical: "/team",
   },
+  openGraph: {
+    url: "/team",
+    title: 'Team — CXGRD Docs',
+    description: 'Learn about the Team tier, how it works, merge policy enforcement and audit logs.',
+  },
 }
 
 export default function Page() {

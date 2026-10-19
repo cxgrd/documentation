@@ -7,7 +7,12 @@ export const metadata : Metadata = {
     description : 'The check command for CXGRD. Validate your project with compiler-backed checks, posts results to server and evaluate merge policies',
     alternates: {
       canonical: "/commands/check",
-    }
+    },
+    openGraph: {
+      url: "/commands/check",
+      title: 'check — CXGRD Docs',
+      description: 'The check command for CXGRD. Validate your project with compiler-backed checks, posts results to server and evaluate merge policies',
+    },
 };
 
 export default function Page() {

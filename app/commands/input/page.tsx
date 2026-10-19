@@ -7,7 +7,12 @@ export const metadata: Metadata = {
     description : 'Calculate the blast radius of a change using the dependency graph created by cxgrd scan',
     alternates: {
       canonical: "/commands/input",
-    }
+    },
+    openGraph: {
+      url: "/commands/input",
+      title: 'input — CXGRD Docs',
+      description: 'Calculate the blast radius of a change using the dependency graph created by cxgrd scan',
+    },
 };
 
 export default function Page() {

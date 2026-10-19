@@ -7,7 +7,12 @@ export const metadata : Metadata = {
     description : 'The config command, used for managing configurations',
     alternates: {
       canonical: "/commands/config",
-    }
+    },
+    openGraph: {
+      url: "/commands/config",
+      title: 'config — CXGRD Docs',
+      description: 'The config command, used for managing configurations',
+    },
 };
 
 export default function Page() {

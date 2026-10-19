@@ -7,7 +7,12 @@ export const metadata: Metadata = {
     description : 'Analyze your project directory and build dependency graph, helps in calculating blast radius for changes',
     alternates: {
       canonical: "/commands/scan",
-    }
+    },
+    openGraph: {
+      url: "/commands/scan",
+      title: 'scan — CXGRD Docs',
+      description: 'Analyze your project directory and build dependency graph, helps in calculating blast radius for changes',
+    },
 };
 
 export default function Page() {

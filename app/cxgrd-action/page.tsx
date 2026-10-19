@@ -8,6 +8,11 @@ export const metadata : Metadata = {
   alternates: {
     canonical: "/cxgrd-action",
   },
+  openGraph: {
+    url: "/cxgrd-action",
+    title: 'CXGRD GitHub Action — CXGRD Docs',
+    description: 'Learn how to use the CXGRD GitHub Action to integrate deterministic analysis into your CI/CD pipeline.',
+  },
 }
 
 export default function Page() {

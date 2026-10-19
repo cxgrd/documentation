@@ -8,6 +8,11 @@ export const metadata: Metadata = {
     alternates: {
     canonical: "/release-notes",
   },
+  openGraph: {
+    url: "/release-notes",
+    title: 'Release Notes — CXGRD Docs',
+    description: 'Know what is there in the latest major release.',
+  },
 };
 
 export default function Page() {

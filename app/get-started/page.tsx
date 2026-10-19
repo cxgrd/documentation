@@ -8,6 +8,11 @@ export const metadata: Metadata = {
     alternates: {
     canonical: "/get-started",
   },
+  openGraph: {
+    url: "/get-started",
+    title: 'Get Started — CXGRD Docs',
+    description: 'Learn about the requirements for running, installing and using CXGRD.',
+  },
 };
 
 export default function Page() {

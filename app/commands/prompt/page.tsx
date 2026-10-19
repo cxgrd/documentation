@@ -7,7 +7,12 @@ export const metadata: Metadata = {
     description : 'Get a more architecturally accurate prompt for your AI tool using prompt command',
     alternates: {
       canonical: "/commands/prompt",
-    }
+    },
+    openGraph: {
+      url: "/commands/prompt",
+      title: 'prompt — CXGRD Docs',
+      description: 'Get a more architecturally accurate prompt for your AI tool using prompt command',
+    },
 };
 
 export default function Page() {
