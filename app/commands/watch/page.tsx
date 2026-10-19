@@ -12,6 +12,8 @@ export const metadata: Metadata = {
       url: "/commands/watch",
       title: 'watch — CXGRD Docs',
       description: 'Monitor your codebase for dependency changes in real time',
+      type: 'website',
+      images: '/Homepage.png',
     },
 };
 

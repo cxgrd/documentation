@@ -12,6 +12,8 @@ export const metadata : Metadata = {
       url: "/commands/auth-login",
       title: 'auth-login — CXGRD Docs',
       description: 'The authentication command for CXGRD',
+      type: 'website',
+      images: '/Homepage.png',
     },
 };
 

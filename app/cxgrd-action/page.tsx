@@ -12,6 +12,8 @@ export const metadata : Metadata = {
     url: "/cxgrd-action",
     title: 'CXGRD GitHub Action — CXGRD Docs',
     description: 'Learn how to use the CXGRD GitHub Action to integrate deterministic analysis into your CI/CD pipeline.',
+    type: 'website',
+    images: '/Homepage.png',
   },
 }
 

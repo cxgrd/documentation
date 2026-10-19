@@ -12,6 +12,8 @@ export const metadata : Metadata = {
       url: "/commands/check",
       title: 'check — CXGRD Docs',
       description: 'The check command for CXGRD. Validate your project with compiler-backed checks, posts results to server and evaluate merge policies',
+      type: 'website',
+      images: '/Homepage.png',
     },
 };
 

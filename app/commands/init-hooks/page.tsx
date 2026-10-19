@@ -12,6 +12,8 @@ export const metadata : Metadata = {
       url: "/commands/init-hooks",
       title: 'init-hooks — CXGRD Docs',
       description: 'Run checks automatically before commits with cxgrd init-hooks',
+      type: 'website',
+      images: '/Homepage.png',
     },
 };
 

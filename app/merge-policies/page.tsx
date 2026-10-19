@@ -12,6 +12,8 @@ export const metadata: Metadata = {
     url: "/merge-policies",
     title: 'Merge Policies — CXGRD Docs',
     description: 'Learn how CXGRD enforces merge policies using deterministic blast radius calculation before code ships.',
+    type: 'website',
+    images: '/Homepage.png',
   },
 };
 

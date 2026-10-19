@@ -12,6 +12,8 @@ export const metadata: Metadata = {
     url: "/release-notes",
     title: 'Release Notes — CXGRD Docs',
     description: 'Know what is there in the latest major release.',
+    type: 'website',
+    images: '/Homepage.png',
   },
 };
 

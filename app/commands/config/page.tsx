@@ -12,6 +12,8 @@ export const metadata : Metadata = {
       url: "/commands/config",
       title: 'config — CXGRD Docs',
       description: 'The config command, used for managing configurations',
+      type: 'website',
+      images: '/Homepage.png',
     },
 };
 

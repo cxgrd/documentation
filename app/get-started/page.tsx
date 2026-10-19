@@ -12,6 +12,8 @@ export const metadata: Metadata = {
     url: "/get-started",
     title: 'Get Started — CXGRD Docs',
     description: 'Learn about the requirements for running, installing and using CXGRD.',
+    type: 'website',
+    images: '/Homepage.png',
   },
 };
 

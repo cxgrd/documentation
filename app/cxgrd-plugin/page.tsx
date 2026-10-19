@@ -12,6 +12,8 @@ export const metadata: Metadata = {
     url: "/cxgrd-plugin",
     title: 'cxgrd plugin — CXGRD Docs',
     description: 'Learn about the cxgrd plugin and how to use it.',
+    type: 'website',
+    images: '/Homepage.png',
   },
 };
 

@@ -12,6 +12,8 @@ export const metadata: Metadata = {
       url: "/commands/input",
       title: 'input — CXGRD Docs',
       description: 'Calculate the blast radius of a change using the dependency graph created by cxgrd scan',
+      type: 'website',
+      images: '/Homepage.png',
     },
 };
 

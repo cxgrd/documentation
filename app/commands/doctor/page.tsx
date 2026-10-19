@@ -12,6 +12,8 @@ export const metadata : Metadata = {
       url: "/commands/doctor",
       title: 'doctor — CXGRD Docs',
       description: 'Check the readiness and availability of tools before starting strict checks',
+      type: 'website',
+      images: '/Homepage.png',
     },
 };
 

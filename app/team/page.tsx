@@ -12,6 +12,8 @@ export const metadata : Metadata = {
     url: "/team",
     title: 'Team — CXGRD Docs',
     description: 'Learn about the Team tier, how it works, merge policy enforcement and audit logs.',
+    type: 'website',
+    images: '/Homepage.png',
   },
 }
 

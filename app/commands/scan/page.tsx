@@ -12,6 +12,8 @@ export const metadata: Metadata = {
       url: "/commands/scan",
       title: 'scan — CXGRD Docs',
       description: 'Analyze your project directory and build dependency graph, helps in calculating blast radius for changes',
+      type: 'website',
+      images: '/Homepage.png',
     },
 };
 

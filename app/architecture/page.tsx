@@ -12,6 +12,8 @@ export const metadata : Metadata = {
     url: "/architecture",
     title: 'Architecture — CXGRD Docs',
     description: 'An overview of the architectural design decisions behind CXGRD and its approach to computing blast radius.',
+    type: 'website',
+    images: '/Homepage.png',
   },
 }
 
